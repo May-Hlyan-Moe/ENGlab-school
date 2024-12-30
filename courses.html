@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ENG Lab - courses</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        header {
+            background-color: #E3E1D9;
+        }
+
+        .section-1 {
+            height: 35vh;
+        }
+
+        .section-1 i {
+            font-size: 180px;
+            float: right;
+        }
+
+        .section-1 h1 {
+            margin: 20px 0;
+        }
+
+        .container h2 {
+            margin: 30px 0;
+        }
+
+        section .container a {
+            color: black;
+            font-weight: 300;
+            text-decoration: none;
+        }
+
+        @media (max-width:576px) {
+            .section-1 i {
+                display: none;
+            }
+        }
+
+        @media (max-width:768px) {
+            .section-1 i {
+                font-size: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav id="navbar">
+            <h2 class="logo"><i class="fa-solid fa-language"></i>&nbsp;ENG Lab</h2>
+            <ul>
+                <li><a href="./index.html">About</a></li>
+                <li><a href="./courses.html">Courses</a></li>
+                <li><a href="./instructors.html">Instructors</a></li>
+                <li><a href="./register.html">Register</a></li>
+            </ul>
+        </nav>  
+        <br><br><br><br><br>
+        <section class="section-1">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <h1>ENG Lab</h1>
+                        <p>Commence the process of cultivating expertise in the English Language by enrolling in <strong>ENG Lab.</strong></p>
+                    </div>
+                    <div class="col-sm-6">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
+    <section>
+        <div class="container">
+            <h2>Find the right program for you</h2>
+            <hr>
+            <div id="output"></div>
+        </div>
+    </section>
+    <footer>
+        <h4>ENG Lab</h4>
+        <p id="address"></p>
+        <div class="logos-for-footer"> 
+            <i class="fa-brands fa-square-facebook" style="color: #77777c;"></i>
+            <i class="fa-brands fa-square-instagram" style="color: #77777c;"></i>
+            <i class="fa-brands fa-square-twitter" style="color: #77777c;"></i>
+        </div>
+        <div class="divider"></div>
+        <p>Copyright &#169; 2024 ENG Lab Academy. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/aad74cd859.js" crossorigin="anonymous"></script>
+    <script src="./main.js"></script>
+    <script>
+        let courses = [
+            {courseName: "A2 English (Pre Intermediate)", instructor: "Steven", duration: "3 months"},
+            {courseName: "B1 English (Intermediate)", instructor: "Sofi", duration: "3 months"},
+            {courseName: "B2 English (Upper Intermediate)", instructor: "Taylor", duration: "4 months"},
+            {courseName: "C1 English (Advanced)", instructor: "Jassica", duration: "5 months"},
+            {courseName: "C2 English (Proficient)", instructor: "David", duration: "5 months"}
+        ];
+
+        const outputDiv = document.getElementById("output");
+        outputDiv.innerHTML += "<ul>";
+        courses.forEach(course => {
+            const link = document.createElement("a");
+            link.href = "./instructors.html#" + course.instructor;
+            link.textContent = "Instructor by " + course.instructor;
+
+            outputDiv.innerHTML += "<li><strong>" + course.courseName + "</strong></li><br>" +
+                                    "<li>" + link.outerHTML + "</li>" +
+                                    "<li>" + course.duration + "</li><hr>" +
+                                    "</ul>";
+        });
+
+        outputDiv.style.listStyle = "none"
+
+    </script>
+</body>
+</html>

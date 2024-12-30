@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ENG Lab</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles.css">
+    <style>
+        /* header */
+
+        header {
+            height: 100vh;
+            width: 100%;
+            background: linear-gradient(to top, lightgrey 0%, lightgrey 1%, #e0e0e0 26%, #efefef 48%, #d9d9d9 75%, #bcbcbc 100%);
+            background-size: cover;
+            background-position: center;
+        }
+
+        header .center {
+            display: grid;
+            place-items: center;
+            height: 70vh;
+        }  
+
+        header h1 {
+            font-size: 50px;
+        }
+
+        header .center i {
+            font-size: 300px;
+            display: block;
+            margin: 0 auto;
+            float: right;
+            transform:  rotateZ(13deg);
+            transition: all 200ms ease;
+        }
+
+        header .center i:hover {
+            transform: scale(1.2);
+        }
+
+        header .center h3 {
+            font-size: 40px;
+        }
+
+        /* about */
+
+        .about h2 {
+            text-align: center;
+            margin: 40px auto;
+        }
+
+        /* partner */
+
+        .partners {
+            height: 80vh;
+            background-color: gray;
+            padding: 30px 0;
+        }
+
+        .partners h2 {
+            text-align: center;
+            margin: 40px auto;
+        }
+
+        .partners .partner {
+            padding: 8px;
+            border: 1px solid black;
+            border-radius: 16px;
+        }
+
+        #carousel {
+            overflow: hidden;
+            white-space: nowrap;
+            width: 100%;
+        }
+
+        .slide {
+            display: inline-block;
+            width: 100%;
+            height: 200px;
+            margin: 10px;
+            margin: 0 auto;
+            align-items: center;
+            text-align: center;
+        }
+
+        .partners .buttons {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .buttons button {
+            padding: 0 20px;
+            margin-top: 30px;
+            margin: 0 auto;
+            display: grid;
+            /*display: inline-block; */
+            align-items: center;
+        }
+
+        /* get in touch */
+
+        .get-in-touch {
+            height: 70vh;
+        }
+
+        .get-in-touch .icon {
+            font-size: 300px;
+            margin: 0 auto;
+            display: block;
+            text-align: center;
+        }
+
+        .get-in-touch h4 {
+            margin: 30px;
+        }
+
+        form {
+            margin: 20px;
+        }
+
+        form input[type=text], textarea {
+            border: 1px solid black;
+            padding: 6px;
+            margin: 10px;
+            width: 80%;
+            background-color: #E3E1D9;
+            border-radius: 10px;
+        }
+
+        form input[type=submit] {
+            padding: 10px 24px;
+            margin-right: 10px;
+            color: white;
+            background-color: black;
+            margin: 10px;
+            border-radius: 10px;
+        }
+
+        @media (max-width:576px) {
+            header img {
+                display: none;
+            }
+
+            header .center {
+                height: 50vh;
+                padding-top: 70px;
+            }
+
+            header .center h3 {
+            font-size: 30px;
+            }
+        }
+
+        @media (max-width:768px) {
+            .center .icon {
+                display: none;
+            }
+
+            .get-in-touch .icon {
+                display: none;
+            }
+        }
+
+        @media (max-width:992px) {
+            header .center i {
+                font-size: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav id="navbar">
+            <h2 class="logo"><i class="fa-solid fa-language"></i>&nbsp;ENG Lab</h2>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="./courses.html">Courses</a></li>
+                <li><a href="./instructors.html">Instructors</a></li>
+                <li><a href="./register.html">Register</a></li>
+            </ul>
+        </nav>  
+        <br><br><br><br><br>
+        <div class="center">
+            <h1>ENG Lab</h1>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>English Courses for Everyone</h3>
+                        <p>In our English courses for everyone, we embrace the diversity of voices and backgrounds, fostering an inclusive space where language becomes the common thread weaving us together. Here, we celebrate the beauty of communication, empowering every individual to unlock the doors to literature, culture, and connection.</p>
+                        <a href="./register.html" class="btn btn-dark">Register Now</a>
+                    </div>
+                    <div class="col-md-6 icon">
+                        <i class="fa-solid fa-language"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <span id="about"></span>
+    </header>
+    <section class="about">
+        <h2>About ENG Lab</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="images/english-about.jpg" class="img-fluid" alt="english-about">
+                </div>
+                <div class="col-md-6">
+                    <h2>Story of ENG Lab</h2>
+                    <p>
+                        Established in 2005, Lingua Vista has been a beacon of language learning excellence for over two decades. Since our founding, we have been dedicated to providing high-quality English language education to students from around the world. With a commitment to innovation, personalized instruction, and cultural enrichment, Lingua Vista continues to empower learners to achieve their language goals and unlock new opportunities in today's globalized world.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="partners">
+        <h2>Our Partner</h2>
+        <div id="carousel" class="carousel">
+            <div class="slides">
+                <div class="slide">
+                    <h4>Champions College.</h4>
+                    <img src="images/champions-college.jpg" alt="champions-college" style="width: 250px;" class="partner">
+                    <div><strong>Gold Partner</strong></div>
+                </div>
+                <div class="slide">
+                    <h4>Decelis Academy</h4>
+                    <img src="images/decelis-academy.jpg" alt="decelis-academy" style="width: 250px;" class="partner">
+                    <div><strong>Gold Partner</strong></div>
+                </div>
+                <div class="slide">
+                    <h4>HILLEL</h4>
+                    <img src="images/hillel.jpg" alt="hillel" style="width: 250px;" class="partner">
+                    <div><strong>Silver Partner</strong></div>
+                </div>
+                <div class="slide">
+                    <h4>Trine University</h4>
+                    <img src="images/trine-university.jpg" alt="trine-university" style="width: 250px;" class="partner">
+                    <div><strong>Silver Partner</strong></div>
+                </div>
+            </div>
+        </div>
+        <div class="buttons">
+            <button onclick="moveBackward()" class="fs-3 btn btn-dark"><strong>&lt;</strong></button>
+            <button onclick="moveForward()" class="fs-3 btn btn-dark"><strong>&gt;</strong></button>
+        </div>
+    </section>
+    <section class="get-in-touch" id="getTouch">
+        <div class="container">
+            <div class="row">
+                <div class="col icon">
+                    <i class="fa-solid fa-comments" style="color: #6f6f72;"></i>
+                </div>
+                <div class="col">
+                    <h4>Get in touch with ENG Lab</h4>
+                    <form>
+                        <input type="text" name="name" id="name" placeholder="Enter your name" required>
+                        <input type="text" name="email" id="email" placeholder="Enter your email" required>
+                        <textarea name="message" id="message" placeholder="Enter your message..." cols="30" rows="5" required></textarea>
+                        <input type="submit" value="Submit">
+                    </form>
+                </div>
+            </div>
+        </div> 
+    </section>       
+    <footer>
+        <h4>ENG Lab</h4>
+        <p id="address"></p>
+        <div class="logos-for-footer"> 
+            <i class="fa-brands fa-square-facebook" style="color: #77777c;"></i>
+            <i class="fa-brands fa-square-instagram" style="color: #77777c;"></i>
+            <i class="fa-brands fa-square-twitter" style="color: #77777c;"></i>
+        </div>
+        <div class="divider"></div>
+        <p>Copyright &#169; <span id="currentYear"></span> ENG Lab Academy. All Rights Reserved.</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/aad74cd859.js" crossorigin="anonymous"></script>
+    <script src="./main.js"></script>
+    <script>
+        // partner carousel
+        const carousel = document.getElementById('carousel');
+        const carouselWidth = carousel.offsetWidth;
+        
+        let scrollPosition = 0;
+        function scrollCarousel() {
+            scrollPosition += carouselWidth;
+            if (scrollPosition >= carousel.scrollWidth) {
+                scrollPosition = 0;
+            }       
+            carousel.scrollTo({
+                left: scrollPosition,
+                behavior: 'smooth'
+            })
+        }
+
+        setInterval(scrollCarousel, 3000);
+
+        //partner backward and forward
+
+        const container = document.querySelector('.carousel');
+        const slides = document.querySelector('.slides');
+
+        function moveBackward() {
+            const firstSlide = slides.children[0];
+            slides.appendChild(firstSlide);
+        }
+
+        function moveForward() {
+            const lastSlide = slides.children[slides.children.length - 1];
+            slides.insertBefore(lastSlide, slides.children[0]);
+        }
+
+        //message 
+
+        document.getElementById("getTouch").addEventListener("submit", function(event){
+            event.preventDefault();
+
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var message = document.getElementById("message").value;
+
+            if (email.indexOf("@") == -1) {
+                alert("Please check your email");
+            } else {
+                document.getElementById("name").value = "";
+                document.getElementById("email").value = "";
+                document.getElementById("message").value = "";
+
+                alert("Form messaged Successfully");
+            }
+        });
+    </script>
+</body>
+</html>
